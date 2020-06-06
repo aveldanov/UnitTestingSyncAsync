@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A49764248C634D00CDC6D4 /* photolodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A49763248C634D00CDC6D4 /* photolodeTests.swift */; };
+		21A4976C248C637500CDC6D4 /* PhotoLoadAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A4976B248C637500CDC6D4 /* PhotoLoadAsyncTests.swift */; };
 		71029C282000236D000F90EB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71029C272000236D000F90EB /* Helpers.swift */; };
 		716D9BDD20001FB8001C9403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D9BDC20001FB8001C9403 /* AppDelegate.swift */; };
 		716D9BDF20001FB8001C9403 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D9BDE20001FB8001C9403 /* PhotoViewController.swift */; };
@@ -17,7 +19,21 @@
 		719EA0272006D4EF006BC6E2 /* DownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719EA0262006D4EF006BC6E2 /* DownloadClient.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		21A49766248C634D00CDC6D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 716D9BD120001FB8001C9403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 716D9BD820001FB8001C9403;
+			remoteInfo = photolode;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		21A49761248C634D00CDC6D4 /* photolodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = photolodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A49763248C634D00CDC6D4 /* photolodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photolodeTests.swift; sourceTree = "<group>"; };
+		21A49765248C634D00CDC6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A4976B248C637500CDC6D4 /* PhotoLoadAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoadAsyncTests.swift; sourceTree = "<group>"; };
 		71029C272000236D000F90EB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		716D9BD920001FB8001C9403 /* photolode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photolode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716D9BDC20001FB8001C9403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		21A4975E248C634D00CDC6D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		716D9BD620001FB8001C9403 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21A49762248C634D00CDC6D4 /* photolodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				21A49763248C634D00CDC6D4 /* photolodeTests.swift */,
+				21A49765248C634D00CDC6D4 /* Info.plist */,
+				21A4976B248C637500CDC6D4 /* PhotoLoadAsyncTests.swift */,
+			);
+			path = photolodeTests;
+			sourceTree = "<group>";
+		};
 		71029C2620002361000F90EB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				716D9BDB20001FB8001C9403 /* photolode */,
+				21A49762248C634D00CDC6D4 /* photolodeTests */,
 				716D9BDA20001FB8001C9403 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				716D9BD920001FB8001C9403 /* photolode.app */,
+				21A49761248C634D00CDC6D4 /* photolodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +135,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		21A49760248C634D00CDC6D4 /* photolodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A4976A248C634D00CDC6D4 /* Build configuration list for PBXNativeTarget "photolodeTests" */;
+			buildPhases = (
+				21A4975D248C634D00CDC6D4 /* Sources */,
+				21A4975E248C634D00CDC6D4 /* Frameworks */,
+				21A4975F248C634D00CDC6D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A49767248C634D00CDC6D4 /* PBXTargetDependency */,
+			);
+			name = photolodeTests;
+			productName = photolodeTests;
+			productReference = 21A49761248C634D00CDC6D4 /* photolodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		716D9BD820001FB8001C9403 /* photolode */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716D9BF620001FB8001C9403 /* Build configuration list for PBXNativeTarget "photolode" */;
@@ -123,10 +176,15 @@
 		716D9BD120001FB8001C9403 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Caleb Stultz";
 				TargetAttributes = {
+					21A49760248C634D00CDC6D4 = {
+						CreatedOnToolsVersion = 11.5;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 716D9BD820001FB8001C9403;
+					};
 					716D9BD820001FB8001C9403 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -147,11 +205,19 @@
 			projectRoot = "";
 			targets = (
 				716D9BD820001FB8001C9403 /* photolode */,
+				21A49760248C634D00CDC6D4 /* photolodeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21A4975F248C634D00CDC6D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		716D9BD720001FB8001C9403 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +231,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21A4975D248C634D00CDC6D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A49764248C634D00CDC6D4 /* photolodeTests.swift in Sources */,
+				21A4976C248C637500CDC6D4 /* PhotoLoadAsyncTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		716D9BD520001FB8001C9403 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +253,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21A49767248C634D00CDC6D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 716D9BD820001FB8001C9403 /* photolode */;
+			targetProxy = 21A49766248C634D00CDC6D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		716D9BE020001FB8001C9403 /* Main.storyboard */ = {
@@ -199,6 +282,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		21A49768248C634D00CDC6D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
+				INFOPLIST_FILE = photolodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.photolodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/photolode.app/photolode";
+			};
+			name = Debug;
+		};
+		21A49769248C634D00CDC6D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
+				INFOPLIST_FILE = photolodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.photolodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/photolode.app/photolode";
+			};
+			name = Release;
+		};
 		716D9BF420001FB8001C9403 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -311,10 +437,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HLCDLFXF5Y;
+				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
 				INFOPLIST_FILE = photolode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stultzapps.photolode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.photolode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,10 +452,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HLCDLFXF5Y;
+				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
 				INFOPLIST_FILE = photolode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stultzapps.photolode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.photolode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +465,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		21A4976A248C634D00CDC6D4 /* Build configuration list for PBXNativeTarget "photolodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A49768248C634D00CDC6D4 /* Debug */,
+				21A49769248C634D00CDC6D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		716D9BD420001FB8001C9403 /* Build configuration list for PBXProject "photolode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

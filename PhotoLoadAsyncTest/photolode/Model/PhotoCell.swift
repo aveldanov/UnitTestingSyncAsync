@@ -1,10 +1,4 @@
-//
-//  PhotoCell.swift
-//  photolode
-//
-//  Created by Caleb Stultz on 1/5/18.
-//  Copyright © 2018 Caleb Stultz. All rights reserved.
-//
+
 
 import UIKit
 
