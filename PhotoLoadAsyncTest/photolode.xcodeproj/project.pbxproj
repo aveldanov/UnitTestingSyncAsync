@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21A49764248C634D00CDC6D4 /* photolodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A49763248C634D00CDC6D4 /* photolodeTests.swift */; };
 		21A4976C248C637500CDC6D4 /* PhotoLoadAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A4976B248C637500CDC6D4 /* PhotoLoadAsyncTests.swift */; };
+		21A4976E248C66BC00CDC6D4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 21A4976D248C66BC00CDC6D4 /* README.md */; };
 		71029C282000236D000F90EB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71029C272000236D000F90EB /* Helpers.swift */; };
 		716D9BDD20001FB8001C9403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D9BDC20001FB8001C9403 /* AppDelegate.swift */; };
 		716D9BDF20001FB8001C9403 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D9BDE20001FB8001C9403 /* PhotoViewController.swift */; };
@@ -34,6 +35,7 @@
 		21A49763248C634D00CDC6D4 /* photolodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photolodeTests.swift; sourceTree = "<group>"; };
 		21A49765248C634D00CDC6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A4976B248C637500CDC6D4 /* PhotoLoadAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoadAsyncTests.swift; sourceTree = "<group>"; };
+		21A4976D248C66BC00CDC6D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71029C272000236D000F90EB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		716D9BD920001FB8001C9403 /* photolode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photolode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716D9BDC20001FB8001C9403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		716D9BD020001FB8001C9403 = {
 			isa = PBXGroup;
 			children = (
+				21A4976D248C66BC00CDC6D4 /* README.md */,
 				716D9BDB20001FB8001C9403 /* photolode */,
 				21A49762248C634D00CDC6D4 /* photolodeTests */,
 				716D9BDA20001FB8001C9403 /* Products */,
@@ -224,6 +227,7 @@
 			files = (
 				716D9BE720001FB8001C9403 /* LaunchScreen.storyboard in Resources */,
 				716D9BE420001FB8001C9403 /* Assets.xcassets in Resources */,
+				21A4976E248C66BC00CDC6D4 /* README.md in Resources */,
 				716D9BE220001FB8001C9403 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
