@@ -15,6 +15,7 @@ class DownloadClient {
             //code to create image
         }.resume()
     }
+  
     
     func terribleFunctionYouWouldNeverWrite() {
         let totalValue = 1000000
