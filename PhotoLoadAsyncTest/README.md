@@ -12,6 +12,9 @@
 
 
 ## Endpoint Testing
-* Mocking Data
+* Mocking Sessions to limit to our needs
 
+
+
+## Performance Testing
 
