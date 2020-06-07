@@ -23,11 +23,11 @@ class CalculatorViewController: UIViewController {
     @IBOutlet var divideBtn: UIButton!
     @IBOutlet var acBtn: UIButton!
     
-    var calculationManager: CalculationManager!
+    var calculationManager: CalculatorViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        calculationManager = CalculationManager()
+        calculationManager = CalculatorViewModel()
     }
     
     @IBAction func numberBtnWasPressed(_ sender: UIButton) {
