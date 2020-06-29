@@ -64,4 +64,13 @@ class CalculatorViewControllerTests: XCTestCase {
   
   
   
+  
+  func testClearButton_ShouldClearLabel(){
+        sut.sevenBtn.sendActions(for: .touchUpInside)
+        sut.eightBtn.sendActions(for: .touchUpInside)
+        sut.acBtn.sendActions(for: .touchUpInside)
+    XCTAssertEqual(sut.valueLabel.text, "0")
+
+  }
+  
 }
