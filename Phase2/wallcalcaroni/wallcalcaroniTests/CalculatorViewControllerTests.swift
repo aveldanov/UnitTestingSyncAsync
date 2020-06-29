@@ -12,16 +12,40 @@ import XCTest
 class CalculatorViewControllerTests: XCTestCase {
   
   var sut: CalculatorViewController!
-
-    override func setUpWithError() throws {
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      sut = storyboard.instantiateViewController(withIdentifier: "CalculatorViewController") as! CalculatorViewController
-    }
-
-    override func tearDownWithError() throws {
-
-    }
-
-
-
+  
+  override func setUpWithError() throws {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    sut = storyboard.instantiateViewController(withIdentifier: "CalculatorViewController") as! CalculatorViewController
+    
+    sut.loadViewIfNeeded()
+  }
+  
+  override func tearDownWithError() throws {
+    sut = nil
+  }
+  
+  func testAddingValue_ShouldUpdateLabel(){
+    
+    sut.twoBtn.sendActions(for: .touchUpInside)
+    sut.fiveBtn.sendActions(for: .touchUpInside)
+    
+    XCTAssertEqual(sut.valueLabel.text, "25")
+  }
+  
+  
+  func testEqualsButton_ShouldCalculateAndUpdateLabel(){
+    sut.twoBtn.sendActions(for: .touchUpInside)
+    sut.fiveBtn.sendActions(for: .touchUpInside)
+    
+    sut.subtractBtn.sendActions(for: .touchUpInside)
+    sut.fiveBtn.sendActions(for: .touchUpInside)
+    
+    sut.equalsBtn.sendActions(for: .touchUpInside)
+    
+    XCTAssertEqual(sut.valueLabel.text, "20")
+    
+  }
+  
+  
+  
 }
