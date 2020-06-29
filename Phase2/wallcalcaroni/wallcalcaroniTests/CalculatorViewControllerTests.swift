@@ -46,6 +46,22 @@ class CalculatorViewControllerTests: XCTestCase {
     
   }
   
+  func testOperandButtons_ShouldChangeOperandWhenTapped(){
+    sut.fourBtn.sendActions(for: .touchUpInside)
+    sut.multiplyBtn.sendActions(for: .touchUpInside)
+    
+    sut.addBtn.sendActions(for: .touchUpInside)
+
+    sut.fourBtn.sendActions(for: .touchUpInside)
+    sut.equalsBtn.sendActions(for: .touchUpInside)
+
+    
+    
+    XCTAssertEqual(sut.valueLabel.text, "8")
+    
+    
+  }
+  
   
   
 }
