@@ -73,5 +73,4 @@ class CalculationManagerTests: XCTestCase {
     XCTAssertEqual(sut.valueEntryArray, [])
     
   }
-  
 }
