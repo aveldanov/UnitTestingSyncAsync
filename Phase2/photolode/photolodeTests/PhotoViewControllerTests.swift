@@ -10,24 +10,34 @@ import XCTest
 
 class PhotoViewControllerTests: XCTestCase {
 
+  var sut: PhotoViewController!
+  
+  
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      sut = storyboard.instantiateViewController(withIdentifier: "PhotoViewController") as! PhotoViewController
+      sut.loadViewIfNeeded()
+      
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+      sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+  func testPhotoDownload_ImageOrientationIdenticalToOfflineFile(){
+    let expectedImageOrientation = UIImage(named: "pexels-photo-768218")?.imageOrientation
+    
+    guard let url = URL(string: imageURLStrings[3]) else {
+      XCTFail(); return
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    let sessionAnsweredExpecation = expectation(description: "Session")
+    
+    URLSession.shared.dataTask(with: url) { (data, response, error) in
+      if let err = error {
+        XCTFail(err.localizedDescription)
+      }
     }
+    sessionAnsweredExpecation.fulfill()
+  }
 
 }
