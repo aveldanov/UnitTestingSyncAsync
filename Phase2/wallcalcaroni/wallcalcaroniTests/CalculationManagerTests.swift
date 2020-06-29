@@ -64,4 +64,14 @@ class CalculationManagerTests: XCTestCase {
     
   }
   
+  func testClear_WhenCalledClearValues(){
+    sut.insert(value: 1)
+    sut.clearValues()
+    
+    XCTAssertEqual(sut.valueA, 0)
+    XCTAssertEqual(sut.valueB, 0)
+    XCTAssertEqual(sut.valueEntryArray, [])
+    
+  }
+  
 }
