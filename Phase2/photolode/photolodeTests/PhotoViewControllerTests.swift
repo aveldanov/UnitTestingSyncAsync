@@ -33,11 +33,25 @@ class PhotoViewControllerTests: XCTestCase {
     let sessionAnsweredExpecation = expectation(description: "Session")
     
     URLSession.shared.dataTask(with: url) { (data, response, error) in
-      if let err = error {
-        XCTFail(err.localizedDescription)
+      if let error = error {
+        XCTFail(error.localizedDescription)
       }
-    }
-    sessionAnsweredExpecation.fulfill()
+      
+      if let data = data{
+        guard let image = UIImage(data: data) else {
+          XCTFail(); return
+        }
+        sessionAnsweredExpecation.fulfill()
+        XCTAssertEqual(image.imageOrientation, expectedImageOrientation)
+      }
+    }.resume()
+    
+    waitForExpectations(timeout: 8, handler: nil)
+    
   }
+  
+  
+  
+  
 
 }
