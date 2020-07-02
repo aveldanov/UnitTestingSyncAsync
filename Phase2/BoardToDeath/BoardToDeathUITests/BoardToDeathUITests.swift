@@ -3,7 +3,6 @@
 //  BoardToDeathUITests
 //
 //  Created by Veldanov, Anton on 7/1/20.
-//  Copyright © 2020 Caleb Stultz. All rights reserved.
 //
 
 import XCTest
@@ -28,7 +27,10 @@ class BoardToDeathUITests: XCTestCase {
   func testOnboarding_WhenSwiped_NextVCLaunched(){
     app.launch()
     
-    XCTAssertTrue(app.staticTexts["Welcome to BoardToDeath"])
+    XCTAssertTrue(app.staticTexts["Welcome to BoardToDeath"].exists)
+    app.swipeLeft()
+    XCTAssertTrue(app.staticTexts["Custom Puppy Content"].exists)
+    
   }
  
 }
