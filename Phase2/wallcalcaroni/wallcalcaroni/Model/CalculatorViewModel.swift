@@ -2,10 +2,10 @@
 
 import Foundation
 
-struct CalculationManager: Equatable {
+struct CalculatorViewModel: Equatable {
   
   // to test 2 instances of the same class
-  static func ==(lhs: CalculationManager, rhs: CalculationManager)->Bool{
+  static func ==(lhs: CalculatorViewModel, rhs: CalculatorViewModel)->Bool{
     if lhs.valueA != rhs.valueA{
       return false
     }

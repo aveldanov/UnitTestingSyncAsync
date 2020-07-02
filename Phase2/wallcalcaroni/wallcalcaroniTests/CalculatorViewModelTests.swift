@@ -3,12 +3,12 @@
 import XCTest
 @testable import wallcalcaroni
 
-class CalculationManagerTests: XCTestCase {
+class CalculatorViewModelTests: XCTestCase {
 
-  var sut: CalculationManager! // System under test
+  var sut: CalculatorViewModel! // System under test
   
     override func setUpWithError() throws {
-        sut = CalculationManager()
+        sut = CalculatorViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -16,9 +16,9 @@ class CalculationManagerTests: XCTestCase {
     }
 
   func testInit_WhenGivenValues_TakesValues(){
-    let calcManager1 = CalculationManager(valueA: 10, valueB: 20, currentOperand: .multiply, valueEntryArray: [])
+    let calcManager1 = CalculatorViewModel(valueA: 10, valueB: 20, currentOperand: .multiply, valueEntryArray: [])
     
-    let calcManager2 = CalculationManager(valueA: 10, valueB: 20, currentOperand: .multiply, valueEntryArray: [])
+    let calcManager2 = CalculatorViewModel(valueA: 10, valueB: 20, currentOperand: .multiply, valueEntryArray: [])
     
     XCTAssertEqual(calcManager1, calcManager2)
     

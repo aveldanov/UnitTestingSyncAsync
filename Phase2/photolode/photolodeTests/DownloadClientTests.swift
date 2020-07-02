@@ -12,9 +12,12 @@ import XCTest
 class DownloadClientTests: XCTestCase {
   
   var sut: DownloadClient!
+  var mockUrlSession: MockURLSession!
 
     override func setUpWithError() throws {
         sut = DownloadClient()
+        mockUrlSession = MockURLSession()
+      sut.session = mockUrlSession
     }
 
     override func tearDownWithError() throws {
@@ -34,20 +37,43 @@ class DownloadClientTests: XCTestCase {
     
   }
 
+  func testDownload_UsesExpectedPath(){
+    let imageUrl = imageURLStrings[3]
+    sut.downloadImage(withURL: imageUrl)
+    guard let url = URL(string: "https://images.pexels.com/photos") else {
+      XCTFail();return
+    }
+    
+    let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
+    XCTAssertEqual(urlComponents?.path, "/photos")
+    
+  }
+  
+  
+  func testTerribleFunction_Performance(){
+    measure {
+          sut.terribleFunctionYouWouldNeverWrite()
 
+    }
+    
+    
+  }
 
 }
 
 
 extension DownloadClientTests{
-  class MockURLSession{
+  class MockURLSession: SessionProtocol{
+    var url:URL?
     
-    
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask{
+//      self.url = url
+      
+      return URLSession.shared.dataTask(with: url)
+      
+    }
     
     
   }
-  
-  
-  
   
 }
