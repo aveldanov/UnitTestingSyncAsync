@@ -32,5 +32,17 @@ class BoardToDeathUITests: XCTestCase {
     XCTAssertTrue(app.staticTexts["Custom Puppy Content"].exists)
     
   }
+  
+  
+  func testOnboarding_WhenDoneButtonTapped_PresentsAlert(){
+    app.launch()
+    app.swipeLeft()
+    app.swipeLeft()
+    app.buttons["Done"].tap()
+    
+  
+    
+    
+  }
  
 }
