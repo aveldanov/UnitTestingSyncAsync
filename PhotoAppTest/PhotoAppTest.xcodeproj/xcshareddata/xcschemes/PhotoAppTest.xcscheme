@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2142DB9B24CBF93C00AAE49F"
-               BuildableName = "X16test.app"
-               BlueprintName = "X16test"
-               ReferencedContainer = "container:X16test.xcodeproj">
+               BlueprintIdentifier = "21140DF924CBE6A3004A7A87"
+               BuildableName = "PhotoAppTest.app"
+               BlueprintName = "PhotoAppTest"
+               ReferencedContainer = "container:PhotoAppTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,7 +27,26 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "xcodebuild clean build build-for-testing &#10;xcodebuild test-without-building&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "21140E0F24CBE6A3004A7A87"
+               BuildableName = "PhotoAppTestTests.xctest"
+               BlueprintName = "PhotoAppTestTests"
+               ReferencedContainer = "container:PhotoAppTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,10 +63,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2142DB9B24CBF93C00AAE49F"
-            BuildableName = "X16test.app"
-            BlueprintName = "X16test"
-            ReferencedContainer = "container:X16test.xcodeproj">
+            BlueprintIdentifier = "21140DF924CBE6A3004A7A87"
+            BuildableName = "PhotoAppTest.app"
+            BlueprintName = "PhotoAppTest"
+            ReferencedContainer = "container:PhotoAppTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +80,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2142DB9B24CBF93C00AAE49F"
-            BuildableName = "X16test.app"
-            BlueprintName = "X16test"
-            ReferencedContainer = "container:X16test.xcodeproj">
+            BlueprintIdentifier = "21140DF924CBE6A3004A7A87"
+            BuildableName = "PhotoAppTest.app"
+            BlueprintName = "PhotoAppTest"
+            ReferencedContainer = "container:PhotoAppTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

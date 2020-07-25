@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "8877FC6C-083D-4DF5-86C5-07815383F019",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:X16test.xcodeproj",
+      "identifier" : "2142DB9B24CBF93C00AAE49F",
+      "name" : "X16test"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:X16test.xcodeproj",
+        "identifier" : "2142DBBC24CBF93E00AAE49F",
+        "name" : "X16testUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:X16test.xcodeproj",
+        "identifier" : "2142DBB124CBF93D00AAE49F",
+        "name" : "X16testTests"
+      }
+    }
+  ],
+  "version" : 1
+}
