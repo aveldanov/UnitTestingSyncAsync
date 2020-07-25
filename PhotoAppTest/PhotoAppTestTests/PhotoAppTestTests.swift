@@ -6,7 +6,6 @@
 //  Copyright © 2020 Anton Veldanov. All rights reserved.
 //
 
-
 import XCTest
 @testable import PhotoAppTest
 
