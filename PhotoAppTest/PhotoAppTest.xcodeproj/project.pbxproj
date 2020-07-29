@@ -14,8 +14,10 @@
 		21140E0724CBE6A3004A7A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21140E0624CBE6A3004A7A87 /* Assets.xcassets */; };
 		21140E0A24CBE6A3004A7A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21140E0824CBE6A3004A7A87 /* LaunchScreen.storyboard */; };
 		218CB96424D145830005ADE1 /* SignUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */; };
+		218CB96824D1F1AE0005ADE1 /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CB96724D1F1AE0005ADE1 /* SignUpConstants.swift */; };
 		21AC482A24D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482924D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift */; };
 		21AC482C24D1404300A1C6A0 /* SignUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */; };
+		21F82DBD24D1F2EE0024A5ED /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CB96724D1F1AE0005ADE1 /* SignUpConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 		21140E0B24CBE6A3004A7A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21140E1024CBE6A3004A7A87 /* PhotoAppTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAppTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21140E1624CBE6A3004A7A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218CB96724D1F1AE0005ADE1 /* SignUpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstants.swift; sourceTree = "<group>"; };
 		21AC482924D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormModelValidatorTests.swift; sourceTree = "<group>"; };
 		21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormModelValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +90,7 @@
 				21140E0124CBE6A3004A7A87 /* ViewController.swift */,
 				21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */,
 				21140E0324CBE6A3004A7A87 /* Main.storyboard */,
+				218CB96724D1F1AE0005ADE1 /* SignUpConstants.swift */,
 				21140E0624CBE6A3004A7A87 /* Assets.xcassets */,
 				21140E0824CBE6A3004A7A87 /* LaunchScreen.storyboard */,
 				21140E0B24CBE6A3004A7A87 /* Info.plist */,
@@ -208,6 +212,7 @@
 				21140DFE24CBE6A3004A7A87 /* AppDelegate.swift in Sources */,
 				21AC482C24D1404300A1C6A0 /* SignUpFormModelValidator.swift in Sources */,
 				21140E0024CBE6A3004A7A87 /* SceneDelegate.swift in Sources */,
+				218CB96824D1F1AE0005ADE1 /* SignUpConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				218CB96424D145830005ADE1 /* SignUpFormModelValidator.swift in Sources */,
+				21F82DBD24D1F2EE0024A5ED /* SignUpConstants.swift in Sources */,
 				21AC482A24D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
