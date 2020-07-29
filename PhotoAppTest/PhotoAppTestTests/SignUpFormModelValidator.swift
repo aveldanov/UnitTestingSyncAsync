@@ -1,5 +1,5 @@
 //
-//  Unit2.swift
+//  SignUpFormModelValidator.swift
 //  PhotoAppTestTests
 //
 //  Created by Veldanov, Anton on 7/28/20.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Unit2: XCTestCase {
+class SignUpFormModelValidatorTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,16 +18,17 @@ class Unit2: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample2() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSignUpFormModelValidator_WhenValidFirstNameIsProvided_ShouldReturnTrue(){
+        //Arrage
+        let sut = SignUpFormModelValidatorTests()
+        
+        
+        
+        //Act
+        //Assert
+        
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+
 
 }
