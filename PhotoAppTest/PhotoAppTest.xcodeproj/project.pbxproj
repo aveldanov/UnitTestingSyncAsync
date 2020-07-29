@@ -13,6 +13,7 @@
 		21140E0524CBE6A3004A7A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21140E0324CBE6A3004A7A87 /* Main.storyboard */; };
 		21140E0724CBE6A3004A7A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21140E0624CBE6A3004A7A87 /* Assets.xcassets */; };
 		21140E0A24CBE6A3004A7A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21140E0824CBE6A3004A7A87 /* LaunchScreen.storyboard */; };
+		218CB96424D145830005ADE1 /* SignUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */; };
 		21AC482A24D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482924D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift */; };
 		21AC482C24D1404300A1C6A0 /* SignUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */; };
 /* End PBXBuildFile section */
@@ -214,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218CB96424D145830005ADE1 /* SignUpFormModelValidator.swift in Sources */,
 				21AC482A24D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

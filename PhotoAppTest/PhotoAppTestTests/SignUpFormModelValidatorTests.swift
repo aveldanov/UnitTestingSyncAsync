@@ -11,33 +11,50 @@ import XCTest
 @testable import PhotoAppTest
 
 class SignUpFormModelValidatorTests: XCTestCase {
-
+    var sut:SignUpFormModelValidator!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = SignUpFormModelValidator()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
     func testSignUpFormModelValidator_WhenValidFirstNameIsProvided_ShouldReturnTrue(){
         //Arrage
-        let sut = SignUpFormModelValidator()
         
         //Act
-        
-        sut.isFirstNameValid(firstName:"Anton")
+        let isFirstNameValid = sut.isFirstNameValid(firstName:"Anton")
         
         //Assert
+        XCTAssertTrue(isFirstNameValid,"The isFirstNameValid should return TRUE, but returned FALSE")
+        
         
     }
     
-    func testSome(){
+    func testSignUpFormModelValidator_WhenTooShortNameIsProvided_ShouldReturnFalse(){
+        //Arrange
         
+        //Act
+        let isFirstNameValid = sut.isFirstNameValid(firstName: "S")
         
+        //Assert
+        XCTAssertFalse(isFirstNameValid,"the isFirstNameValid should return FALSE for the first name shorter than 2 chars but it returned TRUE")
         
     }
 
 
+    func testSignUpFormModelValidator_WhenTooLongNameIsProvided_ShouldReturnFalse(){
+        //Arrange
+        
+        //Act
+        let isFirstNameValid = sut.isFirstNameValid(firstName: "S")
+        
+        //Assert
+        XCTAssertFalse(isFirstNameValid,"the isFirstNameValid should return FALSE for the first name shorter than 2 chars but it returned TRUE")
+        
+    }
+    
 
 }
