@@ -116,11 +116,25 @@ class SignUpFormModelValidatorTests: XCTestCase {
         //Arrange
         
         //Act
-        let doPasswordsMatch = sut.doPassowrdsMatch(password: "12345678", repeatPassword:"12345678")
+        let doPasswordsMatch = sut.doPasswordsMatch(password: "12345678", repeatPassword:"12345678")
         
         //Assert
-        XCTAssertFalse(isPasswordValid,"the isFirstNameValid should return FALSE for the first name is longer than \(SignUpConstants.passwordMaxLength) chars but it returned TRUE")
         
+        XCTAssertTrue(doPasswordsMatch,"Password should return TRUE, but returned FALSE ")
+
+    }
+    
+    
+    func testSignUpFormModelValidator_WhenNotMatchingPasswordsProvided_ShouldReturnFalse(){
+        //Arrange
+        
+        //Act
+        let doPasswordsMatch = sut.doPasswordsMatch(password: "12345678", repeatPassword:"123456789")
+        
+        //Assert
+        
+        XCTAssertFalse(doPasswordsMatch,"Password should return False, but returned TRUE ")
+
     }
     
 

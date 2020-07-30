@@ -29,8 +29,6 @@ class SignUpFormModelValidator {
         if lastName.count < SignUpConstants.lastNameMinLength || lastName.count > SignUpConstants.lastNameMaxLength{
             return false
         }
-        
-        
         return returnValue
     }
     
@@ -41,9 +39,13 @@ class SignUpFormModelValidator {
         if password.count < SignUpConstants.passwordMinLength || password.count > SignUpConstants.passwordMaxLength{
             return false
         }
-        
-        
         return returnValue
+    }
+    
+    
+    func doPasswordsMatch(password: String, repeatPassword: String)->Bool{
+
+        return password == repeatPassword
     }
     
     
