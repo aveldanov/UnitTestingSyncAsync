@@ -25,8 +25,11 @@ class SignUpWebServiceTests: XCTestCase {
     func testSignUpWebService_WhenGivenSuccessfulResponse_ReturnsSuccess(){
         // Arrange
         let sut = SignUpWebService()
-        let signUpFormRequestModel = SignUpFormRequestModel()
-        sut.signup(withForm: signUpFormRequestModel)
+        let signUpFormRequestModel = SignUpFormRequestModel(firstName:"Anton", lastName: "Veldanov", email: "test@test.com", password:"12345678")
+        sut.signup(withForm: signUpFormRequestModel){ (signUpResponseModel,error) in
+            
+        }
+        
         
         // Act
         

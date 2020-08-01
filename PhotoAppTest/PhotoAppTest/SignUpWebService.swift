@@ -10,8 +10,10 @@ import Foundation
 
 
 class SignUpWebService{
-    
-    
-    
+    // SignUpFormRequestModel - data input = struct
+    func signup(withForm formModel: SignUpFormRequestModel, completeionHandler: @escaping (SignUpResponseModel?, SignUpErrors?)->Void ){
+        
+        
+    }
     
 }
