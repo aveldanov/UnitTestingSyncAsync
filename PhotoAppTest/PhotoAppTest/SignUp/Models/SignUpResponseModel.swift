@@ -10,6 +10,6 @@ import Foundation
 
 
 struct SignUpResponseModel:Decodable{
-    
+    let status: String
     
 }

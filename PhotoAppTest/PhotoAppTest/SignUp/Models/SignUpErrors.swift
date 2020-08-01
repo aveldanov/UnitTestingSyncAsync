@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct SignUpErrors:Error{
+enum SignUpErrors:Error{
     
+    case responseModelParsingError
+    case invalideRequestURLStringError
     
     
 }

@@ -19,4 +19,6 @@ struct SignUpConstants{
     
     static let passwordMinLength = 2
     static let passwordMaxLength = 10
+    
+    static let signUpURLString = "https://7d1c4eaa-9abf-447a-965a-5ef2b99f818a.mock.pstmn.io/home/status/"
 }
