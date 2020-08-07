@@ -19,7 +19,11 @@ class SignUpWebServiceTests: XCTestCase {
         config.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession(configuration: config)
         sut = SignUpWebService(urlString: SignUpConstants.signUpURLString, urlSession: urlSession)
-        signUpFormRequestModel = SignUpFormRequestModel(firstName:"Anton", lastName: "Veldanov", email: "test@test.com", password:"12345678")
+        signUpFormRequestModel = SignUpFormRequestModel(
+            firstName:"Anton",
+            lastName: "Veldanov",
+            email: "test@test.com",
+            password:"12345678")
     }
     
     override func tearDownWithError() throws {
@@ -34,10 +38,10 @@ class SignUpWebServiceTests: XCTestCase {
     
     func testSignUpWebService_WhenGivenSuccessfullResponse_ReturnsSuccess(){
         // Arrange
-
+        
         let jsonString = "{\"status\":\"ok\"}"
         MockURLProtocol.stubResponseData = jsonString.data(using: .utf8)
-
+        
         let expectation = self.expectation(description: "SignUp Web Services Expectation")
         // Act
         sut.signup(withForm: signUpFormRequestModel){ (signUpResponseModel,error) in
@@ -86,7 +90,7 @@ class SignUpWebServiceTests: XCTestCase {
     func testSignupWebservice_WhenEmptyURLStringProvided_ReturnsError(){
         //Arrange
         let expectation = self.expectation(description: "An empty request URL string expectation")
-
+        
         sut = SignUpWebService(urlString: "")
         //Act
         sut.signup(withForm: signUpFormRequestModel) { (signUpResponseModel, error) in
@@ -114,7 +118,7 @@ class SignUpWebServiceTests: XCTestCase {
         sut.signup(withForm: signUpFormRequestModel) { (signupResponseModel, error) in
             // Assert
             XCTAssertEqual(error, SignUpError.failedRequest(description:errorDescription), "The signup() method did not return an expected error for the Failed Request")
-
+            
             expectation.fulfill()
         }
         
