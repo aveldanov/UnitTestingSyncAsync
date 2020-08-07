@@ -12,6 +12,7 @@ import Foundation
 class MockURLProtocol: URLProtocol{
     
     static var stubResponseData: Data?
+    static var error: Error?
     
     override class func canInit(with request: URLRequest) -> Bool {
         return true
@@ -22,8 +23,15 @@ class MockURLProtocol: URLProtocol{
     }
     // if not stub data then return an empty data object Data()
     override func startLoading() {
-        client?.urlProtocol(self, didLoad: MockURLProtocol.stubResponseData ?? Data())
-        client?.urlProtocolDidFinishLoading(self)
+        
+        
+        if let signUpError = MockURLProtocol.error{
+            self.client?.urlProtocol(self, didFailWithError: signUpError)
+        }else{
+            
+            self.client?.urlProtocol(self, didLoad: MockURLProtocol.stubResponseData ?? Data())
+        }
+        self.client?.urlProtocolDidFinishLoading(self)
         
     }
     
