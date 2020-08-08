@@ -38,6 +38,7 @@
 		214FB3A224DE701D00D40ABE /* SignUpWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FB3A024DE6F0200D40ABE /* SignUpWebServiceProtocol.swift */; };
 		214FB3A424DE7B5D00D40ABE /* MockSignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FB3A324DE7B5D00D40ABE /* MockSignUpViewDelegate.swift */; };
 		214FB3A624DE7C6400D40ABE /* SignUpViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FB3A524DE7C6300D40ABE /* SignUpViewDelegateProtocol.swift */; };
+		214FB3A724DE7EC600D40ABE /* SignUpViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FB3A524DE7C6300D40ABE /* SignUpViewDelegateProtocol.swift */; };
 		218CB96424D145830005ADE1 /* SignUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482B24D1404300A1C6A0 /* SignUpFormModelValidator.swift */; };
 		218CB96824D1F1AE0005ADE1 /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CB96724D1F1AE0005ADE1 /* SignUpConstants.swift */; };
 		21AC482A24D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC482924D13F8900A1C6A0 /* SignUpFormModelValidatorTests.swift */; };
@@ -382,6 +383,7 @@
 				214FB39E24DE329900D40ABE /* MockSignUpWebService.swift in Sources */,
 				214FB39724DE0EB900D40ABE /* SignUpModelValidatorProtocol.swift in Sources */,
 				214FB39324DE0AEF00D40ABE /* MockSignUpModelValidator.swift in Sources */,
+				214FB3A724DE7EC600D40ABE /* SignUpViewDelegateProtocol.swift in Sources */,
 				21F82DBD24D1F2EE0024A5ED /* SignUpConstants.swift in Sources */,
 				214FB3A424DE7B5D00D40ABE /* MockSignUpViewDelegate.swift in Sources */,
 				214FB38724D6069000D40ABE /* MockURLProtocol.swift in Sources */,

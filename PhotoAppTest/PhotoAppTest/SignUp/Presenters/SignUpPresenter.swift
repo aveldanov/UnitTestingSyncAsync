@@ -12,10 +12,12 @@ class SignUpPresenter{
     
     private var formModelValidator: SignUpModelValidatorProtocol
     private var webService: SignUpWebServiceProtocol
+    private weak var delegate: SignUpViewDelegateProtocol?
     
-    init(formModelValidator:SignUpModelValidatorProtocol, webService: SignUpWebServiceProtocol){
+    init(formModelValidator:SignUpModelValidatorProtocol, webService: SignUpWebServiceProtocol, delegate: SignUpViewDelegateProtocol){
         self.formModelValidator = formModelValidator
         self.webService = webService
+        self.delegate = delegate
     }
     
     
@@ -39,12 +41,18 @@ class SignUpPresenter{
         
         if !formModelValidator.doPasswordsMatch(password: formModel.password, repeatPassword: formModel.repeatPassword){
             return
-
+            
         }
         
         let requestModel = SignUpFormRequestModel(firstName: formModel.firstName, lastName: formModel.lastName, email: formModel.email, password: formModel.password)
+        
         webService.signup(withForm: requestModel) { (responseModel, error) in
-            // TODO:
+            
+            if let _ = responseModel{
+                self.delegate?.successfullSignUp()
+                return
+            }
+            
         }
         
     }

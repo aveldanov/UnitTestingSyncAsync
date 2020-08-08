@@ -15,7 +15,8 @@ class SignUpPresenterTests: XCTestCase {
     var mockSignUpModelValidator:MockSignUpModelValidator!
     var mockSignupWebService: MockSignUpWebService!
     var sut: SignUpPresenter!
-    
+    var mockSignUpViewDelegate: MockSignUpViewDelegate!
+
     override func setUpWithError() throws {
          signUpFormModel = SignUpFormModel(
             firstName:"Anton",
@@ -27,8 +28,11 @@ class SignUpPresenterTests: XCTestCase {
         // mock presenter input
          mockSignUpModelValidator = MockSignUpModelValidator()
          mockSignupWebService = MockSignUpWebService()
+        mockSignUpViewDelegate = MockSignUpViewDelegate()
 
-        sut = SignUpPresenter(formModelValidator: mockSignUpModelValidator, webService: mockSignupWebService)
+        sut = SignUpPresenter(formModelValidator: mockSignUpModelValidator,
+                              webService: mockSignupWebService,
+                              delegate: mockSignUpViewDelegate)
     }
     
     override func tearDownWithError() throws {
@@ -76,11 +80,10 @@ class SignUpPresenterTests: XCTestCase {
         // Arrange
         let myExpectation = expectation(description: "Expected the successfulSignup() method to be called")
         
-        let mockSignUpViewDelegate = MockSignUpViewDelegate()
         mockSignUpViewDelegate.expectation = myExpectation
         
         // Act
-//        sut.processUserSignup(formModel: signupFormModel)
+        sut.processUserSignUp(formModel: signUpFormModel)
         self.wait(for: [myExpectation], timeout: 5)
         
         // Assert
