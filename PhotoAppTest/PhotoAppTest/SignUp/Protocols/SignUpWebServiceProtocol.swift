@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol SignUpWebServiceProtocol {
-    func signup(withForm formModel: SignUpFormRequestModel, completeionHandler: @escaping (SignUpResponseModel?, SignUpError?)->Void )
+    func signup(withForm formModel: SignUpFormRequestModel, completionHandler: @escaping (SignUpResponseModel?, SignUpError?)->Void )
 }

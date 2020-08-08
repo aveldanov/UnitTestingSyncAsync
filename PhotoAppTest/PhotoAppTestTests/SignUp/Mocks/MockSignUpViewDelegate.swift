@@ -14,6 +14,9 @@ import XCTest
 class MockSignUpViewDelegate: SignUpViewDelegateProtocol{
     var expectation: XCTestExpectation?
     var successfullSignUpCounter = 0
+    var errorHandlerCounter = 0
+    var signUpError: SignUpError?
+
 
     func successfullSignUp() {
         // ensuring the method was called only 1 time
@@ -22,7 +25,11 @@ class MockSignUpViewDelegate: SignUpViewDelegateProtocol{
     }
     
     func errorHandler(error: SignUpError) {
-        //
+        signUpError = error
+print("BOOOOOOOOOOOOOM u")
+        errorHandlerCounter += 1
+        expectation?.fulfill()
+
     }
     
     
