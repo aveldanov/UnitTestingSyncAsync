@@ -11,13 +11,12 @@ import Foundation
 class SignUpPresenter{
     
     private var formModelValidator: SignUpModelValidatorProtocol
-    private var webSerive: SignUpWebServiceProtocol
+    private var webService: SignUpWebServiceProtocol
     
-    init(formModelValidator:SignUpModelValidatorProtocol, webSerive: SignUpWebServiceProtocol){
+    init(formModelValidator:SignUpModelValidatorProtocol, webService: SignUpWebServiceProtocol){
         self.formModelValidator = formModelValidator
-        self.webSerive = webSerive
+        self.webService = webService
     }
-    
     
     
     func processUserSignUp(formModel: SignUpFormModel){
@@ -43,6 +42,10 @@ class SignUpPresenter{
 
         }
         
+        let requestModel = SignUpFormRequestModel(firstName: formModel.firstName, lastName: formModel.lastName, email: formModel.email, password: formModel.password)
+        webService.signup(withForm: requestModel) { (responseModel, error) in
+            // TODO:
+        }
         
     }
     
