@@ -43,7 +43,6 @@ class SignUpPresenterTests: XCTestCase {
         sut = nil
     }
     
-    
     func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty(){
         // Arrange
 
