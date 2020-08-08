@@ -11,8 +11,11 @@ import Foundation
 class SignUpPresenter{
     
     private var formModelValidator: SignUpModelValidatorProtocol
-    init(formModelValidator:SignUpModelValidatorProtocol){
+    private var webSerive: SignUpWebServiceProtocol
+    
+    init(formModelValidator:SignUpModelValidatorProtocol, webSerive: SignUpWebServiceProtocol){
         self.formModelValidator = formModelValidator
+        self.webSerive = webSerive
     }
     
     
@@ -38,6 +41,8 @@ class SignUpPresenter{
             return
 
         }
+        
+        
     }
     
     
