@@ -39,6 +39,7 @@ class SignUpPresenterTests: XCTestCase {
         signUpFormModel = nil
         mockSignUpModelValidator = nil
         mockSignupWebService = nil
+        mockSignUpViewDelegate = nil
         sut = nil
     }
     
@@ -87,7 +88,7 @@ class SignUpPresenterTests: XCTestCase {
         self.wait(for: [myExpectation], timeout: 5)
         
         // Assert
-//        XCTAssertEqual(mockSignupViewDelegate.successfulSignupCounter, 1, "The successfulSignup() method was called more than one time")
+        XCTAssertEqual(mockSignUpViewDelegate.successfullSignUpCounter, 1, "The successfulSignup() method was called more than one time")
         
         
     }
