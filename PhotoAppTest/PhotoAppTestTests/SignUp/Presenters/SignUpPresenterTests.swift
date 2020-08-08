@@ -11,19 +11,13 @@ import XCTest
 
 
 class SignUpPresenterTests: XCTestCase {
+    var signUpFormModel: SignUpFormModel!
+    var mockSignUpModelValidator:MockSignUpModelValidator!
+    var mockSignupWebService: MockSignUpWebService!
+    var sut: SignUpPresenter!
     
     override func setUpWithError() throws {
-
-    }
-    
-    override func tearDownWithError() throws {
-        
-    }
-    
-    
-    func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty(){
-        // Arrange
-        let signUpFormModel = SignUpFormModel(
+         signUpFormModel = SignUpFormModel(
             firstName:"Anton",
             lastName: "Veldanov",
             email: "test@test.com",
@@ -31,10 +25,23 @@ class SignUpPresenterTests: XCTestCase {
             repeatPassword:"12345678"
         )
         // mock presenter input
-        let mockSignUpModelValidator = MockSignUpModelValidator()
-        let mockSignupWebService = MockSignUpWebService()
+         mockSignUpModelValidator = MockSignUpModelValidator()
+         mockSignupWebService = MockSignUpWebService()
 
-        let sut = SignUpPresenter(formModelValidator: mockSignUpModelValidator, webService: mockSignupWebService)
+        sut = SignUpPresenter(formModelValidator: mockSignUpModelValidator, webService: mockSignupWebService)
+    }
+    
+    override func tearDownWithError() throws {
+        signUpFormModel = nil
+        mockSignUpModelValidator = nil
+        mockSignupWebService = nil
+        sut = nil
+    }
+    
+    
+    func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty(){
+        // Arrange
+
         
         // Act
         
@@ -52,26 +59,33 @@ class SignUpPresenterTests: XCTestCase {
     
     func testSignupPresenter_WhenGivenValidFormModel_ShouldCallSignupMethod(){
         // Arrange
-        let signUpFormModel = SignUpFormModel(
-            firstName:"Anton",
-            lastName: "Veldanov",
-            email: "test@test.com",
-            password:"12345678",
-            repeatPassword:"12345678"
-        )
-        // mock presenter input
-        let mockSignUpModelValidator = MockSignUpModelValidator()
-        let mockSignupWebService = MockSignUpWebService()
 
-        let sut = SignUpPresenter(formModelValidator: mockSignUpModelValidator, webService: mockSignupWebService)
-        
-        
+
         // Act
         sut.processUserSignUp(formModel: signUpFormModel)
         
         
         // Assert
         XCTAssertTrue(mockSignupWebService.isSignupMethodCalled, "The signup() method was not called in the SignupWebService class")
+        
+    }
+    
+    
+    
+    func testSignupPresenter_WhenSignupOperationSuccessful_CallsSuccessOnViewDelegate(){
+        // Arrange
+        let myExpectation = expectation(description: "Expected the successfulSignup() method to be called")
+        
+        let mockSignUpViewDelegate = MockSignUpViewDelegate()
+        mockSignUpViewDelegate.expectation = myExpectation
+        
+        // Act
+//        sut.processUserSignup(formModel: signupFormModel)
+        self.wait(for: [myExpectation], timeout: 5)
+        
+        // Assert
+//        XCTAssertEqual(mockSignupViewDelegate.successfulSignupCounter, 1, "The successfulSignup() method was called more than one time")
+        
         
     }
     
