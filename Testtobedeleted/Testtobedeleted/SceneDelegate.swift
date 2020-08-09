@@ -1,9 +1,8 @@
 //
 //  SceneDelegate.swift
-//  PhotoAppTest
+//  Testtobedeleted
 //
-//  Created by Veldanov, Anton on 7/24/20.
-//  Copyright © 2020 Anton Veldanov. All rights reserved.
+//  Created by Veldanov, Anton on 8/9/20.
 //
 
 import UIKit
@@ -18,17 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        let viewController = SignupViewController()
-        if let windowScene = scene as? UIWindowScene {             self.window = UIWindow(windowScene: windowScene)
-            self.window?.rootViewController = viewController
-            self.window?.makeKeyAndVisible()}
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
