@@ -36,9 +36,11 @@ class SignUpWebService:SignUpWebServiceProtocol{
         
         let dataTask = urlSession.dataTask(with: request) { (data, response, error) in
             //a unit test to handle error
-            
             if let requestError = error{
                 completionHandler(nil, SignUpError.failedRequest(description: requestError.localizedDescription))
+                
+                print("ERRORREAL: ",SignUpError.failedRequest(description: requestError.localizedDescription))
+
                 return
             }
             

@@ -26,7 +26,6 @@ class MockSignUpViewDelegate: SignUpViewDelegateProtocol{
     
     func errorHandler(error: SignUpError) {
         signUpError = error
-print("BOOOOOOOOOOOOOM u")
         errorHandlerCounter += 1
         expectation?.fulfill()
 

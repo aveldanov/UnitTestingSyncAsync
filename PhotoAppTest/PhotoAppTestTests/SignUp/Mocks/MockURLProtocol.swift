@@ -27,6 +27,7 @@ class MockURLProtocol: URLProtocol{
         
         if let signUpError = MockURLProtocol.error{
             self.client?.urlProtocol(self, didFailWithError: signUpError)
+            print("ERRRRRR",signUpError)
         }else{
             
             self.client?.urlProtocol(self, didLoad: MockURLProtocol.stubResponseData ?? Data())

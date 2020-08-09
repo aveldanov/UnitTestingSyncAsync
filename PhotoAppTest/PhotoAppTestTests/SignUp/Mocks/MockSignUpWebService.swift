@@ -19,7 +19,7 @@ class MockSignUpWebService: SignUpWebServiceProtocol{
         isSignupMethodCalled = true
         
 
-        
+//        print("BOOM ", SignUpError.failedRequest(description: error))
         if shouldReturnError {
             completionHandler(nil, SignUpError.failedRequest(description: "Signup request was not successful"))
         } else {
