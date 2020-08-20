@@ -13,6 +13,7 @@ class PhotoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.reloadData()
     }
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
