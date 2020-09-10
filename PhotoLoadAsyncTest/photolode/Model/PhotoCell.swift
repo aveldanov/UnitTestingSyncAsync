@@ -5,7 +5,6 @@ import UIKit
 var imageCache: NSCache<AnyObject, AnyObject> = NSCache()
 
 class PhotoCell: UITableViewCell {
-    
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
