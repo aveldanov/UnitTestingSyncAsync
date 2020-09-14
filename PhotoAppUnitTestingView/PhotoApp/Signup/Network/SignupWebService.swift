@@ -42,7 +42,6 @@ class SignupWebService: SignupWebServiceProtocol {
                 completionHandler(nil, SignupError.invalidResponseModel)
             }
         }
-        
         dataTask.resume()
     }
 }
