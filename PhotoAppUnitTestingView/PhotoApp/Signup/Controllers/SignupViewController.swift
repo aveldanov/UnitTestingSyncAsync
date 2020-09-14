@@ -29,7 +29,6 @@ class SignupViewController: UIViewController {
         }
     }
     
- 
     @IBAction func signupButtonTapped(_ sender: Any) {
         let signupFormModel = SignupFormModel(firstName: firstNameTextField.text ?? "",
                                               lastName: lastNameTextField.text ?? "",
