@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol SignupModelValidatorProtocol {
     
       func isFirstNameValid(firstName: String) -> Bool
