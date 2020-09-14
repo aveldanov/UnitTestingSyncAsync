@@ -23,6 +23,7 @@ class SignupWebService: SignupWebServiceProtocol {
             completionHandler(nil, SignupError.invalidRequestURLString)
             return
         }
+        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
